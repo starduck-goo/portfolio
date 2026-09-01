@@ -210,41 +210,53 @@
     /* Tabs on the right side */
     .tabs {
         position: absolute;
-        right: 15%;
+        right: 20%;
         top: 35%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
+        gap: 30px 0px;
         
     }
 
-    /* --- DOMINO INDENTING --- */
+    /*Row 1 (items 1–4)*/
+    .tabs>*:nth-child(n + 1):nth-child(-n + 4) {
+        transform: translateX(100px);
+    }
 
-    /* Row 1 (items 1–4) */
+     /*Row 2 (items 5–8) */
+    .tabs>*:nth-child(n + 5):nth-child(-n + 8) {
+        transform: translateX(100px);
+    }
+
+    /* --- DOMINO INDENTING 
+
+    Row 1 (items 1–4) 
     .tabs>*:nth-child(n + 1):nth-child(-n + 4) {
         margin-left: 0px;
     }
 
-    /* Row 2 (items 5–8) */
+     Row 2 (items 5–8) 
     .tabs>*:nth-child(n + 5):nth-child(-n + 8) {
         transform: translateX(70px);
     }
 
-    /* Row 3 (items 9–12) */
+    Row 3 (items 9–12) 
     .tabs>*:nth-child(n + 9):nth-child(-n + 12) {
         transform: translateX(80px);
     }
 
-    /* Row 4 (items 13–16) */
+    Row 4 (items 13–16) 
     .tabs>*:nth-child(n + 13):nth-child(-n + 16) {
         transform: translateX(120px);
     }
 
+    */
+    
     .tab {
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(155, 55, 55, 0);
         color: #9FEE3E;
         border: none;
-        padding: 10px 16px;
+        padding: 10px 0px;
         text-align: center;
         border-radius: 8px;
         cursor: pointer;
@@ -260,7 +272,7 @@
     }
 
     .tab.active {
-        background: #fff;
+        /*background: #fff;*/
         color: #6EBEFF;
         font-weight: 500;
     }
@@ -465,7 +477,7 @@
 
     .bottomtabs {
         position: absolute;
-        right: 70%;
+        right: 67%;
         top: 62%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -476,10 +488,12 @@
     .bottomtab {
         background: rgba(255, 255, 255, 0.08);
         color: #9FEE3E;
+
         border: none;
         padding: 10px 12px;
         text-align: left;
         border-radius: 8px;
+        
 
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
@@ -594,7 +608,7 @@
 <body>
     <div class="intro" id="intro">
         <img src="melostudio_logo_white.png" alt="melostudio logo" style="width: 330px; height: auto;">
-        <h1 class="montserrat"> melostudio</h1>
+        <h1 class="montserrat"> 2026 Portfolio</h1>
 
     </div>
 
@@ -618,7 +632,7 @@
             </div>
             <div class="brandname">
                 <img src="melostudio_logo_white.png" alt="melostudio logo" style="width: 100px; height: auto;">
-                <h1 class="montserrat2">melostudio</h1>
+                <h1 class="montserrat2">2026 Portfolio</h1>
             </div>
             <div class="name">
                 <p>Carrie Chan</p>
@@ -663,41 +677,38 @@
 
                         <button class="tab active" role="tab" data-title="mahjong microsite branding guideline"
                             data-body="A microsite centered around the mahjong community and showcasing the game features, rules, and opening venues to play tournaments in. In addition a branding guidline for site's visual identity including logo, color palette, typography, and iconography."
-                            data-imgs="grid1|mahjonglaptopmck.png,Mahjong_final.png, Mahjong_Slide 16_9 - 1.png, Mahjong_Slide 16_9 - 2.png, Mahjong_Slide 16_9 - 3.png, Mahjong_Slide 16_9 - 4.png, 
-                            Mahjong_Slide 16_9 - 5.png, Mahjong_Slide 16_9 - 6.png, Mahjong_Slide 16_9 - 7.png, Mahjong_Slide 16_9 - 8.png, Mahjong_Slide 16_9 - 9.png,
-                             Mahjong_Slide 16_9 - 10.png, Mahjong_Slide 16_9 - 11.png, Mahjong_Slide 16_9 - 12.png, Mahjong_Slide 16_9 - 13.png,
-                              Mahjong_Slide 16_9 - 14.png, Mahjong_Slide 16_9 - 15.png, Mahjong_Slide 16_9 - 16.png, Mahjong_Slide 16_9 - 17.png, 
-                              Mahjong_Slide 16_9 - 18.png, Mahjong_Slide 16_9 - 19.png, Mahjong_Slide 16_9 - 20.png, Mahjong_Slide 16_9 - 21.png, 
-                              Mahjong_Slide 16_9 - 22.png, Mahjong_Slide 16_9 - 23.png">mahjong</button>
+                            data-imgs="grid1|Mahjong_1.png, Mahjong_2.png, Mahjong_3.png, Mahjong_4.png, Mahjong_5.png, Mahjong_6.png, Mahjong_7.png, Mahjong_8.png, Mahjong_9.png, Mahjong_10.png, Mahjong_11.png, 
+                            Mahjong_12.png, Mahjong_13.png, Mahjong_14.png, Mahjong_15.png, mahjonglaptopmck.png, Mahjong_billboard.png, Mahjong_tilecases.png, Mahjong_final.png">mahjong microsite branding guideline</button>
                          <button class="tab" role="tab" data-title="moon book layout and design"
                             data-body="A book layout and design project based on the theme of the moon. The book contains various illustrations and designs that explore the concept of the moon in different contexts, such as short stories and poems. This work was influenced by the concept of fear of the unknown in space by implementing different textures of deep red and undertones of bright pastels for the otherworldly dread feeling."
                             data-imgs="grid1|moonbookcovermck.png,moonbookinsidemck.png, CarrieChan_moon_final-01.png ,CarrieChan_moon_final-02.png, CarrieChan_moon_final-03.png,
                              CarrieChan_moon_final-04.png, CarrieChan_moon_final-05.png, CarrieChan_moon_final-06.png, CarrieChan_moon_final-07.png, 
                              CarrieChan_moon_final-08.png, CarrieChan_moon_final-09.png, CarrieChan_moon_final-10.png, CarrieChan_moon_final-11.png,
-                             CarrieChan_moon_final-12.png, CarrieChan_moon_final-13.png, CarrieChan_moon_final-14.png, CarrieChan_moon_final-15.png">moon</button>
+                             CarrieChan_moon_final-12.png, CarrieChan_moon_final-13.png, CarrieChan_moon_final-14.png, CarrieChan_moon_final-15.png">moon book illustration</button>
                             
                         <button class="tab" role="tab" data-title="noma food app"
                             data-body="A UX/UI case study for a restaurant and recreation finding app. Noma delivers a solution to help friends and family efficiently plan outings in a faster time. The app features a map that shows nearby restaurants and recreational activities, as well as reviews by actual diners, and special events happening around the area."
-                            data-imgs="grid4|noma1.png, noma2.png, noma3.png, noma4.png, noma5.png, noma6.png, noma7.png, noma8.png, grid1|noma wireframing.jpg, noma flow map.jpg, noma_casestudy.png">noma</button>
+                            data-imgs="grid4|noma1.png, noma2.png, noma3.png, noma4.png, noma5.png, noma6.png, noma7.png, noma8.png, grid1|noma wireframing.jpg, noma flow map.jpg, noma_casestudy.png">noma food app wireframe</button>
                         <!--data-imgs="noma1.png, noma2.png, noma3.png, noma4.png, noma5.png, noma wireframing.jpg, noma flow map.jpg">Noma</button>-->
                         <button class="tab" role="tab" data-title="hungry otter"
                             data-body="Hungry otter is a food co-op that is an independent production and owned by the locals. It focuses on giving back to the community by increasing affordable groceries, increase market and access for locally grown food, and raise awareness of nutrition and healthy eating habits."
-                            data-imgs="grid3|hungryotter_seasonings-mckup.png, hungryotter_orange-mckup.png, hungryotter_wine-mckup.png, hungryotter_paperbag-mckup.png, hungryotter_logo1-color 1.png, hungryotter_logo1b.png, hungryotter_color palette and font.png, hungryotter_ logo2 color.jpg, hungryotter_logo2b.png, hungryotter_logo_sketches.jpg">hungry
-                            otter</button>
+                            data-imgs="grid3|hungryotter_logo1-color 1.png, hungryotter_logo1b.png, hungryotter_color palette and font.png, hungryotter_ logo2 color.jpg, hungryotter_logo2b.png, hungryotter_seasonings-mckup.png, hungryotter_orange-mckup.png, hungryotter_wine-mckup.png, hungryotter_paperbag-mckup.png">hungry
+                            otter logo branding</button>
                         <button class="tab" role="tab" data-title="3d stickers"
                             data-body="A series of stickers made in Blender and rendered in high quality PNGs with transparent backgrounds for easy use in various digital platforms"
                             data-imgs="grid2|sticker_raccoon.gif, sticker_sandwich.gif, sticker_ice cream.gif">3dStickers</button>
                         <button class="tab" role="tab" data-title="flower"
                             data-body="My first app mockup design project for a flower shop that allows users to browse and purchase flowers online. Including but not limited to a sign in page, search categories based on user's needs, and a search function for the name."
-                            data-imgs="grid2|flower1.png, flower2.png, flower3.png, flower4.png, flower5.png">flower</button>
+                            data-imgs="grid2|flower1.png, flower2.png, flower3.png, flower4.png, flower5.png">flower shop app mockup</button>
 
                         <button class="tab" role="tab" data-title="cochon menu design"
                             data-body="A menu design for a restaurant called Cochon. The menu is organized into 2 sets for lunch and dinner, and other for drinks. The design strives to portray a clean and modern aesthetic through minimalist layouts and faint background patterns to show emphasis on menu items."
-                            data-imgs="grid1|menu1a.png, menu1b.png">cochon</button>
+                            data-imgs="grid1|menu1a.png, menu1b.png">cochon menu digital printout</button>
                         <button class="tab" role="tab" data-title="animation gifs"
                             data-body="A series of gifs made through Photoshop and Fresco that showcases various looping animations."
                             data-imgs="grid1|gif hands.gif, gif juice.gif, gif heels.gif">gifs</button>
                     </nav>
+
                     <nav class="bottomtabs" role="tablist" aria-label="Right side bottom tabs">
                         <button class="bottomtab" role="tab">banana</button>
                 </div>
